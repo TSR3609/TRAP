@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GOOGLE_TRAP</title>
+        <style>
+            h1{
+                text-align: center;
+                font-size: 50px;
+                color: #007300;
+            }
+            body{
+                background-image: url('try2.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            textarea{
+                height: 290px;
+                width: 290px;
+                background-color: black;
+                color: white;
+                font-size: 35px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            #greeting{
+                font-size: 50px;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                text-align: center;
+                font-weight: bolder;
+            }
+            #clock{
+                color: green;
+                font-size: 40px;
+                font-weight: bold;
+                font-style: italic;
+                text-align: center;
+            }
+            #input{
+                border-color: black;
+                border-radius: 50px;
+                height: 50px;
+                width: 500px;
+                background-color: black;
+                color: green;
+                font-size: 30px;
+                align-self: center;
+                font-family: comic sans ms;
+            }
+            #searchbtn{
+                border-radius: 50px;
+                height: 50px;
+                width: 50px;
+                background-color: black;
+                color: black;
+                font-size: 30px;
+                align-self: center;
+            }
+           
+            #searchbardiv{
+                margin-top: 100px;
+                margin-left: 700px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome Mr.TSR</h1>
+        <div id = "clock"></div>
+    <script type = "text/javascript">
+        setInterval(displayclock, 500)
+        function displayclock(){
+            var time = new Date();
+            var hrs = time.getHours();
+            var min = time.getMinutes();
+            var sec = time.getSeconds();
+            if (hrs > 12){
+                hrs = hrs - 12
+            }
+            if (hrs == 0 ){
+                hrs = 12
+            }
+            document.getElementById('clock').innerHTML = hrs + ':' + min + ':' + sec;
+        }
+    </script>
+        <a href="index.html"><img src="home.png" style="border-radius:100%" height="200px"></a>
+        
+     <div id = "searchbardiv">
+        <form action = "https://www.google.com/search" target="_blank" method="get">
+            <input type = "text" placeholder="Search Google" name = "q" id = "input">
+            <button type = "submit" id = "searchbtn"><img src = "image-removebg-preview.png" height="40px"></button>
+        </form>
+    </div>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TRAP</title>
+        <style>
+            h1{
+                text-align: center;
+                font-size: 50px;
+                color: #007300;
+            }
+            body{
+                background-image: url('try2.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            #clock{
+                color: green;
+                font-size: 40px;
+                font-weight: bold;
+                font-style: italic;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome Mr.TSR</h1>
+        <div id = "clock"></div>
+        <script type = "text/javascript">
+            setInterval(displayclock, 500)
+            function displayclock(){
+                var time = new Date();
+                var hrs = time.getHours();
+                var min = time.getMinutes();
+                var sec = time.getSeconds();
+                if (hrs > 12){
+                    hrs = hrs - 12
+                }
+                if (hrs == 0 ){
+                    hrs = 12
+                }
+                document.getElementById('clock').innerHTML = hrs + ':' + min + ':' + sec;
+            }
+        </script>
+        <a href="https://www.discord.com/app" target="_blank"><img src="discord.png" height="100px"></a>
+        <br>
+        <br>
+        <br>
+        <a href="youtube.html"><img src="yt.png" height="90px"></a>
+        <br>
+        <br>
+        <a href="https://www.instagram.com/" target="_blank"><img src="insta.png" height="145px"></a>
+        <br>
+        <br>
+        <a href="https://web.whatsapp.com/" target="_blank"><img src="whatsapp.png" height="150px"></a>
+        <br>
+        <br>
+        <a href="googlesearch.html"><img src="google.png" height="150px" style ="padding-right: -500px;"></a>
+    </body>
+</html>

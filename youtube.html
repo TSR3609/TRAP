@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YOUTUBE_TRAP</title>
+        <style>
+            h1{
+                text-align: center;
+                font-size: 50px;
+                color: #007300;
+            }
+            body{
+                background-image: url('try2.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            #clock{
+                color: green;
+                font-size: 40px;
+                font-weight: bold;
+                font-style: italic;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "clock"></div>
+        <script type = "text/javascript">
+            setInterval(displayclock, 500)
+            function displayclock(){
+                var time = new Date();
+                var hrs = time.getHours();
+                var min = time.getMinutes();
+                var sec = time.getSeconds();
+                if (hrs > 12){
+                    hrs = hrs - 12
+                }
+                if (hrs == 0 ){
+                    hrs = 12
+                }
+                document.getElementById('clock').innerHTML = hrs + ':' + min + ':' + sec;
+            }
+        </script>
+        <h1>Welcome Mr.TSR</h1>
+        <a href="index.html"><img src="home.png" style="border-radius:100%" height="200px"></a>
+        <br>
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Fyj5wbzRPC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br>
+        <a href="https://www.youtube.com" target="_blank"><img src="ytt.png"></a>
+        </html>
